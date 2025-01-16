@@ -15,8 +15,9 @@ app.use('/static', express.static('src/public'))
 
 
 app.get('/', (req, res) => {
-    res.render('home', { layout: false });
+    res.render('home');
 });
+
 
 
 app.listen(5000, () => console.log('Server listening on port http://localhost:5000...'));
