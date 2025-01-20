@@ -9,6 +9,14 @@ export default {
         if (filter.search) {
             result = result.filter(movie => movie.title.toLocaleLowerCase().includes(filter.search.toLocaleLowerCase()));
         }
+
+        if (filter.genre) {
+            result = result.filter(movie => movie.genre.toLocaleLowerCase() === filter.genre);
+        }
+
+        if (filter.year) {
+            result = result.filter(movie => movie.year === filter.year);
+        }
         return result;
     },
 
