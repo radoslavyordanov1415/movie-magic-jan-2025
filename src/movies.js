@@ -7,7 +7,7 @@ export default [
         imageUrl: '/static/img/jungle-cruise.jpeg',
         director: 'Jaume Collet-Serra',
         year: '2021',
-        rating: '6.6',
+        rating: 6.6,
         category: 'movie'
 
     },
@@ -20,7 +20,7 @@ export default [
         imageUrl: 'https://image.tmdb.org/t/p/original/pKKvCaL1TPTVtbI6EeliyND3api.jpg',
         director: 'Christopher Nolan',
         year: '2008',
-        rating: '9',
+        rating: 9,
         category: 'movie'
     },
 
@@ -32,7 +32,7 @@ export default [
         imageUrl: 'https://image.tmdb.org/t/p/original/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg',
         director: 'Lana Wachowski, Lilly Wachowski',
         year: '1999',
-        rating: '8.7',
+        rating: 8.7,
         category: 'movie'
 
     },
@@ -40,12 +40,12 @@ export default [
     {
         id: '56937c00-30ac-4344-933b-34705ff27e4a',
         title: ' The Godfather',
-        category: 'movie',
         genre: 'Crime drama',
         director: ' Francis Ford Coppola',
         year: '1972',
         imageUrl: 'https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg',
-        rating: '9.2',
+        category: 'movie',
+        rating: 9.2,
         description: 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.'
     }
 
