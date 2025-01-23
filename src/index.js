@@ -9,7 +9,7 @@ const app = express();
 
 // Db configuration
 try {
-    const uri = 'mongodb://127.0.0.1:27017/magic-movies-jan2025'
+    const uri = 'mongodb://localhost:27017/magic-movies-jan2025'
     await mongoose.connect(uri);
 
     console.log('Connected to the database...');
@@ -22,13 +22,9 @@ try {
 // Handlebars configuration
 app.engine('hbs', handlebars.engine({
     extname: 'hbs',
-    runtimeOptions: {
-        allowProtoPropertiesByDefault: true,
-    },
     helpers: {
         showRating: showRatingHelper,
-    },
-
+    }
 }));
 
 
