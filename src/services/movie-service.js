@@ -39,5 +39,13 @@ export default {
         });
 
         return result;
+    },
+
+    async attachCast(movieId, castId) {
+        // Attach number #1
+        const movie = await Movie.findById(movieId)
+        movie.casts.push(castId);
+        await movie.save();
+        return movie;
     }
 }
