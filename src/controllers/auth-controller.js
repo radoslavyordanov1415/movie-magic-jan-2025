@@ -1,4 +1,5 @@
 import { Router } from "express";
+import authService from "../services/auth-service.js";
 
 const authController = Router();
 authController.get('/register', (req, res) => {
@@ -7,10 +8,8 @@ authController.get('/register', (req, res) => {
 
 authController.post('/register', async (req, res) => {
     const userData = req.body;
-    console.log(userData);
 
-    res.end()
-
+    await authService.register(userData);
 })
 
 export default authController;
