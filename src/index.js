@@ -4,6 +4,7 @@ import homeController from './controllers/home-controller.js'
 import routes from './routes.js'
 import showRatingHelper from './helpers/rating-helper.js';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 
@@ -38,7 +39,7 @@ app.set('views', './src/views');
 // Express configuration
 app.use('/static', express.static('src/public'))
 app.use(express.urlencoded({ extended: false })); // Learn express to parse form data 
-
+app.use(cookieParser());
 app.use(homeController);
 
 // Setup routes
