@@ -16,6 +16,7 @@ export const authMiddleware = (req, res, next) => {
 
         // Attach decoded token to request
         req.user = decodedToken;
+
         next();
     } catch (err) {
         res.clearCookie('auth')
