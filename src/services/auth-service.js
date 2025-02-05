@@ -3,7 +3,17 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 const SECRET = process.env.JWT_SECRET || 'BASICSECRET'
 export default {
-    register(userData) {
+    async register(userData) {
+        //* Check if password match rePassword
+        // if (userData.password !== userData.rePassword) {
+        //     throw new Error('Passwords do not match');
+        // }
+        //* Validate if email exists
+        const userCount = await User.countDocuments({ email: userData.email })
+        if (userCount > 0) {
+            throw new Error('Email already exists');
+        }
+
         return User.create(userData);
 
     },
