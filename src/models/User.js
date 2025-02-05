@@ -6,6 +6,7 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
+        lowercase: true, //* sanitize email
         unique: true, //*This is not validator, its index
         match: /\@[a-zA-Z]+.[a-zA-Z]+$/,
         minLength: 10,
@@ -14,7 +15,7 @@ const userSchema = new Schema({
         type: String,
         required: true,
         match: /^\w+$/,
-        minLength: 6,
+        minLength: [5, 'Password should be at least 6 characters'],
     },
 });
 
